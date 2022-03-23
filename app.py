@@ -1,6 +1,7 @@
 import logging
 import requests
 import functools
+import sys
 
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
@@ -12,6 +13,8 @@ logging.basicConfig(
 
 url_to_crawl = 'https://google.com'
 use_tor_network = False
+
+if len(sys.argv) > 1: url_to_crawl = sys.argv[1]
 
 session = requests.session()
 if use_tor_network:
@@ -66,7 +69,7 @@ class Crawler:
                     logging.info(f'Crawling: {url}')
                     self.crawl(url)
             except Exception:
-                logging.exception(f'Failed to crawl: {url}')
+                logging.info(f'Failed to crawl: {url}')
             finally:
                 if url not in self.visited_urls:
                     self.visited_urls.append(url)
