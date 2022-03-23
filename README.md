@@ -1,7 +1,7 @@
 # Recursive website crawler
 
 **Description:**
-* This is a recursive website crawler that crawls a website and returns a list of all the links on the website.
+* It is a recursive crawler that explores and returns all links on a website.
 * It works by scraping all the links on the page. Then, it scraps all the links on the scraped links.
 
 **Usage:**
