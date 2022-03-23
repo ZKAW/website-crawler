@@ -1,5 +1,4 @@
-# website_crawler
-Recursive website crawler
+# Recursive website crawler
 
 **Description:**
 * This is a recursive website crawler that crawls a website and returns a list of all the links on the website.
